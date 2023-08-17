@@ -6,4 +6,6 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3"
 
-gem "bootstrap", "~> 5.3"
+gem "jekyll-autoprefixer", "~> 1.0"
+
+gem "execjs", "= 2.7"
