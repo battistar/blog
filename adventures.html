@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Avventure
+category: adventure
 ---
 
 {% if site.categories.adventure.size > 0 %}
@@ -21,7 +22,7 @@ title: Avventure
         <rect width="100%" height="100%" fill="#868e96"></rect>
       </svg>
       <div class="card-body">
-        <h6 class="text-muted">{{ post.section | upcase }}</h6>
+        <h6 class="text-muted">{{ post.category | upcase }}</h6>
         <h5 class="card-title">{{ post.title }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: "%d %b %Y" }}</h6>
         <p class="card-text">{{ post.excerpt }}</p>

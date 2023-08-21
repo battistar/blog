@@ -1,0 +1,11 @@
+.post-container {
+  @extend .container-fluid;
+  max-width: map-get($container-max-widths, 'lg');
+}
+
+.post-preview,
+.post-preview:hover {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}

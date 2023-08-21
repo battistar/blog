@@ -9,15 +9,18 @@
   <body class="d-flex flex-column vh-100">
     {% include header.html %}
 
-    <div class="d-flex flex-column container-fluid py-3 py-xl-5 flex-grow-1">
+    <div class="post-container py-3 flex-grow-1 d-flex flex-column">
       <div class="flex-grow-1">
-        {{ content }}
+        <h6 class="text-muted">{{ page.category | upcase }}</h6>
+        <h1 class="card-title">{{ page.title }}</h1>
+        <h6 class="card-subtitle mb-2 text-muted">{{ page.date | date: "%d %b %Y" }}</h6>
+        <p class="card-text">{{ page.content }}</p>
       </div>
       <div>
         {% include about-me.html %}
       </div>
     </div>
-  
+
     {% include footer.html %}
 
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
