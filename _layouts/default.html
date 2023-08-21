@@ -9,10 +9,13 @@
   <body class="d-flex flex-column vh-100">
     {% include header.html %}
 
-    <div class="container-xl py-3 py-xl-5 flex-grow-1">
-      {{ content }}
-      
-      {% include about-me.html %}
+    <div class="d-flex flex-column container-xl py-3 py-xl-5 flex-grow-1">
+      <div class="flex-grow-1">
+        {{ content }}
+      </div>
+      <div>
+        {% include about-me.html %}
+      </div>
     </div>
   
     {% include footer.html %}
