@@ -8,18 +8,20 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if page.category == 'home' %}active{% endif %}" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.title == 'Avventure' %}active{% endif %}" href="/adventures.html"
+            <a class="nav-link {% if page.category == 'adventure' %}active{% endif %}" href="/adventures.html"
               >Avventure</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.title == 'Tutorial' %}active{% endif %}" href="/tutorials.html">Tutorial</a>
+            <a class="nav-link {% if page.category == 'tutorial' %}active{% endif %}" href="/tutorials.html"
+              >Tutorial</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.title == "L'angolo del tirchio" %}active{% endif %}" href="/corner.html"
+            <a class="nav-link {% if page.category == 'corner' %}active{% endif %}" href="/corner.html"
               >L'angolo del tirchio</a
             >
           </li>
