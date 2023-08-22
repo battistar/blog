@@ -9,15 +9,38 @@
   <body class="d-flex flex-column vh-100">
     {% include header.html %}
 
-    <div class="post-container d-flex flex-column py-3 py-xl-5 flex-grow-1">
+    <div class="post-container d-flex flex-column align-items-center py-3 py-xl-5 flex-grow-1">
       <div class="flex-grow-1">
-        {{ content }}
+        {% if paginator.total_posts > 0 %}
+          <div class="row g-3 g-lg-4">
+            {% for post in paginator.posts %}
+            <div class="col-sm-6 col-lg-4">{% include post-preview.html %}</div>
+            {% endfor %}
+          </div>
+        {% else %} 
+          {% include no-content.html %} 
+        {% endif %}
       </div>
       <div>
         {% include about-me.html %}
       </div>
+      <ul class="pagination mt-3 mt-xl-5">
+        <li class="page-item {% if paginator.page == 1 %} disabled {% endif %}">
+          <a class="page-link" href="{{ paginator.previous_page_path }}">
+            <span>&laquo;</span>
+          </a>
+        </li>
+        {% for page_number in (1..paginator.total_pages) %}
+        <li class="page-item {% if page_number == paginator.page %} active {% endif %}"><a class="page-link" href="{% if page_number == 1 %}{% if paginator.first_page_path == '/' %}{{ site.baseurl }}{% else %}/{{ paginator.first_page_path | replace: '/', '' }}{% endif %}{% else %}{{ paginator.first_page_path }}page/{{ page_number }}{% endif %}/">{{ page_number }}</a></li>
+        {% endfor %}
+        <li class="page-item {% if paginator.page == paginator.total_pages %} disabled {% endif %}">
+          <a class="page-link" href="{{ paginator.next_page_path }}">
+            <span>&raquo;</span>
+          </a>
+        </li>
+      </ul>
     </div>
-  
+
     {% include footer.html %}
 
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
