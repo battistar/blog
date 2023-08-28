@@ -25,3 +25,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
           pre_build_commands: pacman -S --noconfirm nodejs npm # Add js runtime
+          jekyll_cfg: '_config_production.yml'

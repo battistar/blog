@@ -1,0 +1,21 @@
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '/blog' # the subpath of your site, e.g. /blog
+title: '' # the name of your site, e.g. ACME Corp.
+
+plugins:
+  - jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+    - last 4 versions
+
+permalink: /:year/:month/:title.html
+
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
