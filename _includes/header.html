@@ -8,16 +8,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link {% if page.category == 'home' %}active{% endif %}" href="/">Home</a>
+            <a class="nav-link {% if page.category == 'home' %}active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.category == 'adventure' %}active{% endif %}" href="/adventures/">Avventure</a>
+            <a class="nav-link {% if page.category == 'adventure' %}active{% endif %}" href="{{ "/adventures" | relative_url }}">Avventure</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.category == 'tutorial' %}active{% endif %}" href="/tutorials/">Tutorial</a>
+            <a class="nav-link {% if page.category == 'tutorial' %}active{% endif %}" href="{{ "/tutorials" | relative_url }}">Tutorial</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if page.category == 'corner' %}active{% endif %}" href="/corner/"
+            <a class="nav-link {% if page.category == 'corner' %}active{% endif %}" href="{{ "/corner" | relative_url }}"
               >L'angolo del tirchio</a
             >
           </li>
